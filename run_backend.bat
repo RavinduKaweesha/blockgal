@@ -1,0 +1,7 @@
+@echo off
+echo Installing backend dependencies...
+pip install uvicorn fastapi sqlalchemy pydantic
+
+echo Starting backend server...
+cd backend
+python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000
